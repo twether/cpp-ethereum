@@ -31,7 +31,7 @@ namespace dev
 namespace eth
 {
 
-using PrecompiledExecutor = std::function<bytes(bytesConstRef _in)>;
+using PrecompiledExecutor = std::function<std::pair<bool, bytes>(bytesConstRef _in)>;
 
 DEV_SIMPLE_EXCEPTION(ExecutorNotFound);
 
